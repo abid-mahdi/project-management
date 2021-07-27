@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+	<head th:replace="layouts :: header"></head>
+		
+	<title>Add Employee</title>	
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+	
+	<body id="employee-body">
+		<nav th:replace="layouts :: navbar"></nav>
+		
+			<div class="wrapper">
+				<div class="title">
+					Employee Registration
+				</div>
+			<form th:action="@{/employees/save}" th:object="${employee}" method="POST">
+				<input type="hidden" th:field="${employee.employeeId}"/>
+							
+				<div>
+					<label>First Name</label>
+					<input type="text" th:field="${employee.firstName}">
+						<span style="color:red" th:if="${#fields.hasErrors('firstName')}"
+				 			  th:errors="${employee.firstName}">
+						</span>
+				</div>
+					
+				<div>
+					<label>Last Name</label>
+					<input type="text" th:field="${employee.lastName}">
+					<span style="color:red" th:if="${#fields.hasErrors('lastName')}"
+						  th:errors="${employee.lastName}">
+					</span>
+				</div>
+					
+				<div>
+					<Label>Email</Label>
+					<input type="text" th:field="${employee.email}">
+						<span style="color:red" th:if="${#fields.hasErrors('email')}"
+							  th:errors="${employee.email}">
+						</span>
+				</div>
+			
+				<button type="submit">Enter Employee</button>
+			</form>
+		</div>
+	</body>
+</html>

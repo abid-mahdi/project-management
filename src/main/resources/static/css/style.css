@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+html, body {
+    margin: 0;
+    height: 100%;
+}
+#employee-body {
+	background-image: url("/images/employees.png");
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+#project-body {
+	background-image: url("/images/project.png");
+	background-position: bottom left;
+	background-repeat: no-repeat;
+}
+#home-body {
+    background-image: url("/images/dashboard.png");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 25%;
+}
+textarea {
+  width: 300px;
+  height: 150px;
+}
+.wrapper{
+  max-width: 500px;
+  width: 100%;
+  background: #e0f2fb;
+  margin: 20px auto;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  padding: 30px;
+  border-radius: 25px;
+  font-family:'Montserrat', sans-serif;
+  text-align: center;
+}
+.wrapper .title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color:#051b26;
+  text-transform: uppercase;
+  text-align: center;
+}
+input, button {
+	border-radius: 10px;
+	margin: 3px;
+}
+button {
+	color:green;
+}
